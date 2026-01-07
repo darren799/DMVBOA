@@ -140,3 +140,66 @@ footer {
   }
 }
 
+/* ===== Event Photo Gallery ===== */
+#event-gallery {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.gallery-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.gallery-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: auto;       /* automatically adapts to image */
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;     /* ensures images don’t shrink in flex container */
+}
+
+/* Navigation Dots */
+.gallery-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.gallery-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gallery-dots .dot.active {
+  background-color: #003366; /* Navy color */
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+  .gallery-slide img {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-slide img {
+    height: auto;
+  }
+}
