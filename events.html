@@ -116,3 +116,49 @@
 
 </body>
 </html>
+<script>
+const slide = document.querySelector('.gallery-slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slide.children.length;
+let index = 0;
+let interval;
+
+// Function to show slide by index
+function showSlide(i) {
+  const containerWidth = document.querySelector('.gallery-container').clientWidth;
+  slide.style.transform = `translateX(-${i * containerWidth}px)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[i].classList.add('active');
+  index = i;
+}
+
+// Auto-slide function
+function startSlide() {
+  interval = setInterval(() => {
+    let nextIndex = (index + 1) % totalSlides;
+    showSlide(nextIndex);
+  }, 4000); // 4-second interval
+}
+
+// Pause on hover
+document.querySelector('.gallery-container').addEventListener('mouseenter', () => {
+  clearInterval(interval);
+});
+document.querySelector('.gallery-container').addEventListener('mouseleave', startSlide);
+
+// Dots navigation
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    showSlide(parseInt(dot.dataset.index));
+  });
+});
+
+// Initialize
+window.addEventListener('load', () => {
+  showSlide(0);
+  startSlide();
+});
+
+// Recalculate slide position on window resize
+window.addEventListener('resize', () => showSlide(index));
+</script>
