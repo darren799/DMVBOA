@@ -1,165 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events – DMV Boat Owners Association</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
+<main>
+  <h1>Events & Activities</h1>
+  <p>DMVBOA hosts a variety of events throughout the year — from boat shows and cruises to safety workshops and social gatherings.</p>
 
-  <!-- Header: logo + navigation -->
-  <header style="display:flex; align-items:center; justify-content:space-between; padding:10px 20px;">
-    <img src="assets/img/logo.jpg" alt="DMVBOA Logo" style="height:70px;">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="membership.html">Membership</a>
-      <a href="partners.html">Partners</a>
-      <a href="events.html">DMV Events</a>
-      <a href="boating-safety.html">Boating Safety</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://richardproductionsllc.myshopify.com/collections/dmv-boat-owners-club-and-boat-owners-association" target="_blank" rel="noopener noreferrer">Store</a>
+  <h2>2026 Calendar Highlights</h2>
+  <ul>
+    <li>January: Fredericksburg Boat Show</li>
+    <li>February: Winter Social at Occoquan</li>
+    <li>April: Brunch Cruise on the Potomac</li>
+    <li>June: Summer Launch Party</li>
+    <li>September: Annual Members’ Picnic</li>
+  </ul>
 
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <h1>Events & Activities</h1>
-    <p>DMVBOA hosts a variety of events throughout the year — from boat shows and cruises to safety workshops and social gatherings.</p>
-
-    <h2>2026 Calendar Highlights</h2>
-    <ul>
-      <li>January: Fredericksburg Boat Show</li>
-      <li>February: Winter Social at Occoquan</li>
-      <li>April: Brunch Cruise on the Potomac</li>
-      <li>June: Summer Launch Party</li>
-      <li>September: Annual Members’ Picnic</li>
-    </ul>
-
-    <!-- ===== Rolling Photo Gallery ===== -->
-    <section id="event-gallery">
-      <h2>Highlights from 2025 Events</h2>
-
-      <div class="gallery-container">
-        <div class="gallery-slide">
-          <img src="assets/img/event1.jpg" alt="Event 1">
-          <img src="assets/img/event2.jpg" alt="Event 2">
-          <img src="assets/img/event3.jpg" alt="Event 3">
-          <img src="assets/img/event4.jpg" alt="Event 4">
-        </div>
-
-        <!-- Navigation Dots -->
-        <div class="gallery-dots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
-          <span class="dot" data-index="3"></span>
-        </div>
+  <!-- ====== Event Photo Gallery ====== -->
+  <section id="event-gallery">
+    <div class="gallery-container">
+      <div class="gallery-slide">
+        <img src="assets/img/event1.jpg" alt="Event 1">
+        <img src="assets/img/event2.jpg" alt="Event 2">
+        <img src="assets/img/event3.jpg" alt="Event 3">
+        <img src="assets/img/event4.jpg" alt="Event 4">
+        <img src="assets/img/event5.jpg" alt="Event 5">
+        <img src="assets/img/event6.jpg" alt="Event 6">
+        <img src="assets/img/event7.jpg" alt="Event 7">
+        <img src="assets/img/event8.jpg" alt="Event 8">
+        <img src="assets/img/event9.jpg" alt="Event 9">
+        <img src="assets/img/event10.jpg" alt="Event 10">
       </div>
+    </div>
 
-      <p style="text-align:center; font-style:italic;">Photos from our 2025 events will appear here as we add them!</p>
-    </section>
+    <!-- Navigation Dots -->
+    <div class="gallery-dots"></div>
+  </section>
+</main>
 
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 DMV Boat Owners Association. All Rights Reserved.</p>
-    <p>570 Harborside Drive #14, Woodbridge, VA 22191</p>
-  </footer>
-
-  <!-- ===== Gallery JS ===== -->
-  <script>
-    const slide = document.querySelector('.gallery-slide');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slide.children.length;
-    let index = 0;
-    let interval;
-
-    function showSlide(i) {
-      const slideWidth = slide.children[0].clientWidth;
-      slide.style.transform = `translateX(-${i * slideWidth}px)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[i].classList.add('active');
-      index = i;
-    }
-
-    function startSlide() {
-      interval = setInterval(() => {
-        let nextIndex = (index + 1) % totalSlides;
-        showSlide(nextIndex);
-      }, 4000);
-    }
-
-    // Pause on hover
-    document.querySelector('.gallery-container').addEventListener('mouseenter', () => {
-      clearInterval(interval);
-    });
-    document.querySelector('.gallery-container').addEventListener('mouseleave', startSlide);
-
-    // Dots navigation
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        showSlide(parseInt(dot.dataset.index));
-      });
-    });
-
-    // Initialize
-    window.addEventListener('load', () => {
-      showSlide(0);
-      startSlide();
-      // Adjust on resize
-      window.addEventListener('resize', () => showSlide(index));
-    });
-  </script>
-
-</body>
-</html>
+<!-- ====== Gallery JS ====== -->
 <script>
-const slide = document.querySelector('.gallery-slide');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = slide.children.length;
-let index = 0;
-let interval;
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll('.gallery-slide img');
+  const gallerySlide = document.querySelector('.gallery-slide');
+  const dotsContainer = document.querySelector('.gallery-dots');
+  let currentIndex = 0;
 
-// Function to show slide by index
-function showSlide(i) {
-  const containerWidth = document.querySelector('.gallery-container').clientWidth;
-  slide.style.transform = `translateX(-${i * containerWidth}px)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[i].classList.add('active');
-  index = i;
-}
-
-// Auto-slide function
-function startSlide() {
-  interval = setInterval(() => {
-    let nextIndex = (index + 1) % totalSlides;
-    showSlide(nextIndex);
-  }, 4000); // 4-second interval
-}
-
-// Pause on hover
-document.querySelector('.gallery-container').addEventListener('mouseenter', () => {
-  clearInterval(interval);
-});
-document.querySelector('.gallery-container').addEventListener('mouseleave', startSlide);
-
-// Dots navigation
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    showSlide(parseInt(dot.dataset.index));
+  // Create navigation dots dynamically
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
   });
-});
 
-// Initialize
-window.addEventListener('load', () => {
-  showSlide(0);
-  startSlide();
-});
+  function goToSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    gallerySlide.style.transform = `translateX(-${slideWidth * index}px)`;
+    document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+    document.querySelectorAll('.dot')[index].classList.add('active');
+    currentIndex = index;
+  }
 
-// Recalculate slide position on window resize
-window.addEventListener('resize', () => showSlide(index));
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  }, 5000);
+
+  // Optional: resize handler to keep slides aligned
+  window.addEventListener('resize', () => goToSlide(currentIndex));
+});
 </script>
