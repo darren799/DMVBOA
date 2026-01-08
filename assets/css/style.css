@@ -18,8 +18,8 @@ body::before {
   width: 100%;
   height: 100%;
   background-color: rgba(173, 216, 230, 0.15); /* very light blue overlay */
-  background-image: url('../img/anchor.png');   /* correct relative path */
-  background-repeat: repeat;                     /* repeat the anchor as a pattern */
+  background-image: url('/DMVBOA/assets/img/anchor.png'); /* absolute path from site root */
+  background-repeat: repeat;                     /* repeat the anchor */
   background-position: top left;
   background-size: 100px;                        /* size of each anchor */
   opacity: 0.15;                                 /* subtle watermark */
