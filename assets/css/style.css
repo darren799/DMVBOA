@@ -64,3 +64,36 @@
 @media (max-width: 480px) {
   .gallery-container { width: 100%; }
 }
+/* ====== PayPal Button Styles ====== */
+.paypal-button {
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  min-width: 11.625rem;
+  padding: 0 2rem;
+  height: 2.625rem;
+  font-weight: bold;
+  background-color: #FFD140; /* PayPal Gold */
+  color: #000000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.paypal-button:hover {
+  background-color: #ffce00;
+}
+
+.paypal-powered {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.paypal-card-icons {
+  display: block;
+  margin: 0.25rem auto;
+  height: 1rem;
+}
