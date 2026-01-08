@@ -173,3 +173,7 @@ footer {
     height: 180px;
   }
 }
+/* ===== Temporary background test ===== */
+html {
+  background: url('../img/anchor.png') repeat center center / 150px lightblue !important;
+}
