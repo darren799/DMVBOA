@@ -18,17 +18,13 @@ body::before {
   width: 100%;
   height: 100%;
   background-color: rgba(173, 216, 230, 0.15); /* very light blue overlay */
-  background-image: url('https://darren799.github.io/DMVBOA/assets/img/anchor.png'); /* absolute path for GitHub Pages */
-  background-repeat: repeat;                     /* repeat the anchor pattern */
+  background-image: url('../img/anchor.png');   /* relative path to anchor image */
+  background-repeat: repeat;
   background-position: top left;
-  background-size: 100px;                        /* size of each anchor */
-  opacity: 0.15;                                 /* subtle watermark */
-  z-index: 0;                                    /* behind all content */
-  pointer-events: none;                          /* allow clicks through overlay */
-}
-body > * {
-  position: relative;
-  z-index: 1;                                    /* keep main content above overlay */
+  background-size: 100px;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ====== Header ====== */
@@ -116,8 +112,8 @@ footer {
 
 .gallery-container {
   overflow: hidden;
-  width: 80%;           /* narrower gallery */
-  max-width: 900px;     /* max width desktop */
+  width: 80%;           /* desktop width */
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   border-radius: 10px;
@@ -130,10 +126,12 @@ footer {
   transition: transform 0.5s ease-in-out;
 }
 
+/* Taller images, fully visible top */
 .gallery-slide img {
   width: 100%;
-  height: 300px;        /* taller images */
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 3 / 1;    /* taller ratio */
+  object-fit: contain;     /* preserves full top of image */
   border-radius: 10px;
   flex-shrink: 0;
 }
@@ -159,21 +157,15 @@ footer {
   background-color: #003366;
 }
 
-/* ====== Responsive Gallery ====== */
+/* ====== Responsive adjustments ====== */
 @media (max-width: 1024px) {
-  .gallery-slide img {
-    height: 250px;
-  }
+  .gallery-container { width: 90%; }
 }
 
 @media (max-width: 768px) {
-  .gallery-slide img {
-    height: 220px;
-  }
+  .gallery-container { width: 95%; }
 }
 
 @media (max-width: 480px) {
-  .gallery-slide img {
-    height: 180px;
-  }
+  .gallery-container { width: 100%; }
 }
