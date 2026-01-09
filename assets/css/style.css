@@ -1,3 +1,117 @@
+/* ==========================================
+   DMV Boat Owners Association - Main Stylesheet
+   Updated: January 2026
+   ========================================== */
+
+/* ====== Base Styles ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8e7b3; /* Medium light gold background */
+  background-image: radial-gradient(circle at top left, rgba(255, 255, 255, 0.3), transparent 70%);
+  color: #222;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* ====== Page Background Overlay with Repeating Anchor ====== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 216, 230, 0.10); /* Very light blue overlay, blends with gold */
+  background-image: url('../img/anchor.png');
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 100px;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #003366; /* Deep nautical blue */
+  color: white;
+}
+
+header img {
+  height: 70px;
+}
+
+/* ====== Navigation ====== */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FFD140; /* Gold accent hover */
+}
+
+/* ====== Hero Banner ====== */
+#hero-banner img {
+  width: 100%;
+  max-height: 220px;
+  aspect-ratio: 16 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Main Content ====== */
+main {
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #003366;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+a.button {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+a.button:hover {
+  background-color: #FFD140;
+  color: #000;
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
 /* ====== Event Photo Gallery ====== */
 #event-gallery {
   margin: 40px 0;
@@ -6,14 +120,14 @@
 
 .gallery-container {
   overflow: hidden;
-  width: 80%;           
-  max-width: 900px;     
+  width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: #dbefff; /* light blue background behind images */
-  padding: 10px;             /* optional padding around images */
+  background-color: #dbefff; /* Light blue backdrop behind images */
+  padding: 10px;
 }
 
 .gallery-slide {
@@ -28,7 +142,7 @@
   object-fit: contain;
   border-radius: 10px;
   flex-shrink: 0;
-  background-color: #dbefff; /* matches container as fallback */
+  background-color: #dbefff;
 }
 
 /* Navigation Dots */
@@ -64,6 +178,53 @@
 @media (max-width: 480px) {
   .gallery-container { width: 100%; }
 }
+
+/* ====== Membership Form ====== */
+#membership-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#membership-form label {
+  font-weight: bold;
+  color: #003366;
+}
+
+#membership-form input,
+#membership-form select,
+#membership-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#membership-form input:focus,
+#membership-form textarea:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 170, 255, 0.4);
+}
+
+#membership-form .button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#membership-form .button:hover {
+  background-color: #FFD140;
+  color: #000;
+}
+
 /* ====== PayPal Button Styles ====== */
 .paypal-button {
   text-align: center;
