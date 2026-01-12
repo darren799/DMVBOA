@@ -210,6 +210,46 @@ nav a:hover {
   display: inline-block;
 }
 
+/* ABOUT */
+.about {
+  padding: 90px 8%;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #083b66;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #556677;
+}
+
+.about-text ul {
+  padding-left: 20px;
+}
+
+.about-text li {
+  margin-bottom: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+
 /* INTRO */
 .intro {
   padding: 80px 10%;
