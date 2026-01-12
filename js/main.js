@@ -78,3 +78,47 @@ function setupFilters() {
     });
   });
 }
+/* =========================
+   EVENT MAP (LEAFLET)
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const mapContainer = document.getElementById("map");
+
+  // Only initialize map if container exists AND Leaflet is loaded
+  if (!mapContainer || typeof L === "undefined") return;
+
+  const map = L.map("map").setView([38.85, -77.1], 9);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "© OpenStreetMap contributors"
+  }).addTo(map);
+
+  fetch("data/events.json")
+    .then(res => {
+      if (!res.ok) throw new Error("events.json not found");
+      return res.json();
+    })
+    .then(events => {
+      events.forEach(evt => {
+        if (!evt.coords || evt.coords.length !== 2) return;
+
+        const marker = L.marker(evt.coords).addTo(map);
+
+        marker.bindPopup(`
+          <strong>${evt.title}</strong><br>
+          ${evt.location}<br><br>
+          <button class="map-cta">View Event</button>
+        `);
+
+        marker.on("popupopen", () => {
+          const btn = document.querySelector(".map-cta");
+          if (btn) {
+            btn.addEventListener("click", () => {
+              window.open(CREATE_COMMUNITY_URL, "_blank");
+            });
+          }
+        });
+      });
+    })
+    .catch(err => console.error("Map error:", err));
+});
