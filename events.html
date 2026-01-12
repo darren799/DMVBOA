@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DMVBOA Events | DMV Boat Owners Association</title>
+  <title>Events | DMV Boat Owners Association</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
@@ -23,14 +23,13 @@
     </div>
 
     <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="events.html">Events</a>
-  <a href="membership.html">Membership</a>
-  <a href="partners.html">Partners</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -40,46 +39,50 @@
   <p>Join us on the water and around the DMV</p>
 </section>
 
-<!-- EVENTS LIST -->
+<!-- EVENTS (DYNAMIC) -->
 <section class="events">
-  <div class="event-grid">
-
-   <section class="events">
-  <h2>Upcoming Events</h2>
+  <h2>All Events</h2>
 
   <div class="event-grid" id="eventsGrid">
-    <!-- Events will be injected here -->
-  </div>
-</section>
-
-
-    <div class="event-card">
-      <img src="img/event4.jpg" alt="Fall Raft-Up">
-      <h3>Fall Raft-Up</h3>
-      <p>September 2026 · Potomac River</p>
-    </div>
-
+    <!-- Events injected from data/events.json -->
   </div>
 </section>
 
 <!-- CTA -->
 <section class="homepage-cta">
-  <h2>Don’t Miss Out</h2>
+  <h2>Want Access to Members-Only Events?</h2>
   <p>
-    Members get priority access, exclusive events,
-    and invitations throughout the boating season.
+    DMVBOA members get priority access, exclusive invitations,
+    and special on-water experiences.
   </p>
-  <a href="membership.html" class="btn-primary">Become a Member</a>
+  <a href="#" class="btn-primary join-btn">Become a Member</a>
+  <p class="cta-note">
+    Community-driven · Boater-focused · No spam
+  </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>© 2026 DMV Boat Owners Association · All Rights Reserved</p>
 </footer>
+
+<!-- CREATECOMMUNITY CONFIG -->
 <script>
   const CREATE_COMMUNITY_URL = "https://dmvboa.createcommunity.com";
 </script>
 
+<!-- JOIN BUTTON WIRING -->
+<script>
+  document.querySelectorAll(".join-btn").forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault();
+      window.open(CREATE_COMMUNITY_URL, "_blank");
+    });
+  });
+</script>
+
+<!-- DYNAMIC EVENTS -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
-
