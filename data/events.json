@@ -5,7 +5,8 @@
     "location": "Washington, DC",
     "image": "img/event1.jpg",
     "type": "water",
-    "membersOnly": false
+    "membersOnly": false,
+    "coords": [38.9072, -77.0369]
   },
   {
     "title": "Summer Concert Series",
@@ -13,7 +14,8 @@
     "location": "Belmont Bay Marina",
     "image": "img/event2.jpg",
     "type": "land",
-    "membersOnly": false
+    "membersOnly": false,
+    "coords": [38.6883, -77.2920]
   },
   {
     "title": "Blessing of the Fleet",
@@ -21,6 +23,7 @@
     "location": "Occoquan River",
     "image": "img/event3.jpg",
     "type": "water",
-    "membersOnly": true
+    "membersOnly": true,
+    "coords": [38.6840, -77.2600]
   }
 ]
