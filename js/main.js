@@ -28,6 +28,8 @@ function renderEvents(filter) {
   filtered.forEach(evt => {
     const card = document.createElement("div");
     card.className = "event-card";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
 
     card.innerHTML = `
       <img
@@ -40,6 +42,19 @@ function renderEvents(filter) {
       <p>${evt.date} · ${evt.location}</p>
       ${evt.membersOnly ? `<span class="members-only">Members Only</span>` : ""}
     `;
+
+    // ✅ CLICK HANDLER
+    card.addEventListener("click", () => {
+      window.open(CREATE_COMMUNITY_URL, "_blank");
+    });
+
+    // ✅ KEYBOARD ACCESSIBILITY
+    card.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        window.open(CREATE_COMMUNITY_URL, "_blank");
+      }
+    });
 
     grid.appendChild(card);
   });
