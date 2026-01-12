@@ -279,6 +279,15 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
+/* Prevent event flicker */
+.event-grid.loading {
+  opacity: 0;
+}
+
+.event-grid.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
 .event-card {
   background: white;
