@@ -1,4 +1,12 @@
-/* RESET */
+/* =========================
+   GLOBAL RESET / BASE
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -6,7 +14,14 @@ body {
   background: #ffffff;
 }
 
-/* NAVIGATION */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 .navbar {
   background: #083b66;
   padding: 15px 5%;
@@ -44,7 +59,9 @@ nav a:hover {
   opacity: 0.85;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   min-height: 80vh;
   background:
@@ -72,7 +89,223 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
-/* MEMBERSHIP */
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  background: #ff8c1a;
+  color: white;
+  padding: 14px 34px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   INTRO
+========================= */
+.intro {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   EVENTS
+========================= */
+.events {
+  padding: 90px 8%;
+  background: #f5f8fb;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+/* Filters */
+.filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  margin: 0 6px;
+  padding: 10px 22px;
+  border-radius: 22px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filters button.active {
+  background: #ff8c1a;
+  color: white;
+}
+
+.filters button:focus-visible {
+  outline: 3px solid #ff8c1a;
+  outline-offset: 2px;
+}
+
+/* Event Grid */
+.event-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Flicker prevention */
+.event-grid.loading {
+  opacity: 0;
+}
+
+.event-grid.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Event Card */
+.event-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  overflow: hidden;
+  text-align: left;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  margin: 18px;
+}
+
+.event-card p {
+  margin: 0 18px 12px;
+  color: #556677;
+}
+
+/* Members Only Badge */
+.members-only {
+  display: inline-block;
+  margin: 0 18px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff8c1a;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials {
+  padding: 90px 8%;
+  background: #eaf2f8;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  text-align: left;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial strong {
+  color: #083b66;
+}
+
+/* =========================
+   HOMEPAGE CTA
+========================= */
+.homepage-cta {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #083b66, #0b5fa5);
+  color: white;
+  text-align: center;
+}
+
+.homepage-cta h2 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.homepage-cta p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   PAGE HERO
+========================= */
+.page-hero {
+  padding: 100px 8% 70px;
+  background: #083b66;
+  color: white;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   MEMBERSHIP
+========================= */
 .membership {
   padding: 90px 8%;
   text-align: center;
@@ -103,7 +336,9 @@ nav a:hover {
   color: #083b66;
 }
 
-/* PARTNERS */
+/* =========================
+   PARTNERS
+========================= */
 .partners {
   padding: 90px 8%;
   text-align: center;
@@ -149,7 +384,9 @@ nav a:hover {
   color: #083b66;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact {
   padding: 90px 8%;
 }
@@ -198,19 +435,9 @@ nav a:hover {
   align-self: flex-start;
 }
 
-
-/* BUTTON */
-.btn-primary {
-  background: #ff8c1a;
-  color: white;
-  padding: 14px 34px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-}
-
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 .about {
   padding: 90px 8%;
 }
@@ -225,7 +452,6 @@ nav a:hover {
 }
 
 .about-text h2 {
-  margin-top: 0;
   margin-bottom: 15px;
   color: #083b66;
 }
@@ -249,181 +475,9 @@ nav a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,.12);
 }
 
-/* INTRO */
-.intro {
-  padding: 80px 10%;
-  text-align: center;
-}
-
-.intro h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-/* EVENTS */
-.events {
-  padding: 90px 8%;
-  background: #f5f8fb;
-  text-align: center;
-}
-/* EVENT FILTERS */
-.filters {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.filters button {
-  margin: 0 6px;
-  padding: 10px 22px;
-  border-radius: 22px;
-  border: none;
-  background: #ddd;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.filters button.active {
-  background: #ff8c1a;
-  color: white;
-}
-
-.events h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-}
-
-.event-grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-/* Prevent event flicker */
-.event-grid.loading {
-  opacity: 0;
-}
-
-.event-grid.loaded {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.event-card {
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.12);
-  overflow: hidden;
-  text-align: left;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.15);
-}
-
-.event-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-.event-card h3 {
-  margin: 18px;
-}
-
-.event-card p {
-  margin: 0 18px 22px;
-  color: #556677;
-}
-
-/* TESTIMONIALS */
-.testimonials {
-  padding: 90px 8%;
-  background: #eaf2f8;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-}
-
-.testimonial-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.testimonial {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.12);
-  text-align: left;
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
-.testimonial strong {
-  color: #083b66;
-}
-
-/* HOMEPAGE CTA */
-.homepage-cta {
-  padding: 90px 8%;
-  background: linear-gradient(135deg, #083b66, #0b5fa5);
-  color: white;
-  text-align: center;
-}
-
-.homepage-cta h2 {
-  font-size: 2.6rem;
-  margin-bottom: 15px;
-}
-
-.homepage-cta p {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
-}
-
-.homepage-cta .btn-primary {
-  background: #ff8c1a;
-}
-
-.cta-note {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
-/* PAGE HERO */
-.page-hero {
-  padding: 100px 8% 70px;
-  background: #083b66;
-  color: white;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-.page-hero p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   background: #062c4d;
   color: white;
@@ -432,3 +486,11 @@ footer {
   font-size: 0.9rem;
 }
 
+/* =========================
+   ACCESSIBILITY
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
