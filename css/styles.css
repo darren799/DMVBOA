@@ -180,6 +180,35 @@ nav a:hover {
   color: #083b66;
 }
 
+/* HOMEPAGE CTA */
+.homepage-cta {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #083b66, #0b5fa5);
+  color: white;
+  text-align: center;
+}
+
+.homepage-cta h2 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.homepage-cta p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.homepage-cta .btn-primary {
+  background: #ff8c1a;
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
 
 /* FOOTER */
 footer {
