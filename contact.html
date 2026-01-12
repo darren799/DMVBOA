@@ -1,46 +1,90 @@
-/* PARTNERS */
-.partners {
-  padding: 90px 8%;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | DMV Boat Owners Association</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.partners h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-}
+  <!-- SEO -->
+  <meta name="description" content="Contact the DMV Boat Owners Association for membership, events, or partnership inquiries.">
 
-.partners-intro {
-  max-width: 700px;
-  margin: 0 auto 50px;
-  color: #556677;
-}
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-.partners-grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
+<body>
 
-.partner-card {
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.12);
-  padding: 25px;
-  text-align: left;
-}
+<!-- NAVIGATION -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="DMVBOA Logo">
+      <span>DMVBOA</span>
+    </div>
 
-.partner-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-.partner-card h3 {
-  margin-bottom: 8px;
-  color: #083b66;
-}
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1>Contact DMVBOA</h1>
+  <p>We’d love to hear from you</p>
+</section>
 
+<!-- CONTACT SECTION -->
+<section class="contact">
+  <div class="contact-container">
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>
+        Have questions about membership, events, or partnerships?
+        Reach out and a DMVBOA representative will respond soon.
+      </p>
+
+      <p><strong>Email:</strong> info@dmvboa.org</p>
+      <p><strong>Location:</strong> Washington, DC · Maryland · Virginia</p>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+
+      <form>
+        <label>
+          Name
+          <input type="text" placeholder="Your name">
+        </label>
+
+        <label>
+          Email
+          <input type="email" placeholder="you@email.com">
+        </label>
+
+        <label>
+          Message
+          <textarea rows="5" placeholder="How can we help?"></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DMV Boat Owners Association · All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
