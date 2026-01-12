@@ -1,1 +1,105 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0b2c48;
+  background: #ffffff;
+}
+
+/* NAVIGATION */
+.navbar {
+  background: #083b66;
+  padding: 15px 5%;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  height: 42px;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 0.85;
+}
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/banner.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: #ff8c1a;
+  color: white;
+  padding: 14px 34px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* INTRO */
+.intro {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #062c4d;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+}
 
