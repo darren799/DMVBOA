@@ -149,6 +149,55 @@ nav a:hover {
   color: #083b66;
 }
 
+/* CONTACT */
+.contact {
+  padding: 90px 8%;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  color: #556677;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
 
 /* BUTTON */
 .btn-primary {
