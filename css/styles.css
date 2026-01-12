@@ -209,6 +209,24 @@ nav a:hover {
   opacity: 0.85;
 }
 
+/* PAGE HERO */
+.page-hero {
+  padding: 100px 8% 70px;
+  background: #083b66;
+  color: white;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
 
 /* FOOTER */
 footer {
