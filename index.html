@@ -28,15 +28,13 @@
       <span>DMVBOA</span>
     </div>
 
-        <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="events.html">Events</a>
-  <a href="membership.html">Membership</a>
-  <a href="partners.html">Partners</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -46,7 +44,7 @@
   <div class="hero-content">
     <h1>DMV Boat Owners Association</h1>
     <p>Where DMV Boaters Connect, Learn & Explore Together</p>
-    <a href="membership.html" class="btn-primary">Join DMVBOA</a>
+    <a href="#" class="btn-primary join-btn">Join DMVBOA</a>
   </div>
 </section>
 
@@ -60,28 +58,12 @@
   </p>
 </section>
 
-<!-- EVENTS -->
+<!-- EVENTS (DYNAMIC) -->
 <section class="events">
   <h2>Upcoming Events</h2>
 
-  <div class="event-grid">
-    <div class="event-card">
-      <img src="img/event1.jpg" alt="Pre-Season Brunch Cruise">
-      <h3>Pre-Season Brunch Cruise</h3>
-      <p>April 18, 2026 · Washington, DC</p>
-    </div>
-
-    <div class="event-card">
-      <img src="img/event2.jpg" alt="Summer Concert Series">
-      <h3>Summer Concert Series</h3>
-      <p>Summer 2026 · Belmont Bay Marina</p>
-    </div>
-
-    <div class="event-card">
-      <img src="img/event3.jpg" alt="Blessing of the Fleet">
-      <h3>Blessing of the Fleet</h3>
-      <p>May 2026 · Occoquan River</p>
-    </div>
+  <div class="event-grid" id="eventsGrid">
+    <!-- Events injected from data/events.json -->
   </div>
 </section>
 
@@ -123,22 +105,34 @@
     Join the DMV Boat Owners Association to access exclusive events,
     boating education, and a growing community of DMV boaters.
   </p>
-  <a href="membership.html" class="btn-primary">Join DMVBOA Today</a>
+  <a href="#" class="btn-primary join-btn">Join DMVBOA Today</a>
   <p class="cta-note">
     Trusted by DMV boaters · No spam · Cancel anytime
   </p>
 </section>
 
-  
-  <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 DMV Boat Owners Association · All Rights Reserved</p>
 </footer>
+
+<!-- CREATECOMMUNITY CONFIG -->
 <script>
   const CREATE_COMMUNITY_URL = "https://dmvboa.createcommunity.com";
 </script>
+
+<!-- JOIN BUTTON WIRING -->
+<script>
+  document.querySelectorAll(".join-btn").forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault();
+      window.open(CREATE_COMMUNITY_URL, "_blank");
+    });
+  });
+</script>
+
+<!-- DYNAMIC EVENTS -->
 <script src="js/main.js"></script>
 
 </body>
 </html>
-
