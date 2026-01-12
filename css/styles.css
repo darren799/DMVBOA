@@ -133,7 +133,7 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
-/* Filters */
+/* EVENT FILTERS */
 .filters {
   text-align: center;
   margin-bottom: 30px;
@@ -159,7 +159,7 @@ nav a:hover {
   outline-offset: 2px;
 }
 
-/* Event Grid */
+/* EVENT GRID */
 .event-grid {
   max-width: 1200px;
   margin: auto;
@@ -178,19 +178,25 @@ nav a:hover {
   transition: opacity 0.3s ease;
 }
 
-/* Event Card */
+/* EVENT CARD (CLICKABLE) */
 .event-card {
   background: white;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,.12);
   overflow: hidden;
   text-align: left;
+  cursor: pointer;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .event-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.event-card:focus-visible {
+  outline: 3px solid #ff8c1a;
+  outline-offset: 3px;
 }
 
 .event-card img {
@@ -208,7 +214,7 @@ nav a:hover {
   color: #556677;
 }
 
-/* Members Only Badge */
+/* MEMBERS-ONLY BADGE */
 .members-only {
   display: inline-block;
   margin: 0 18px 18px;
