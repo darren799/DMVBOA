@@ -94,6 +94,55 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
+/* EVENTS */
+.events {
+  padding: 90px 8%;
+  background: #f5f8fb;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.event-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  overflow: hidden;
+  text-align: left;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  margin: 18px;
+}
+
+.event-card p {
+  margin: 0 18px 22px;
+  color: #556677;
+}
+
 /* FOOTER */
 footer {
   background: #062c4d;
