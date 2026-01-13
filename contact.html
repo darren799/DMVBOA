@@ -1,8 +1,6 @@
-<!-- CONTACT SECTION -->
 <section class="contact">
   <div class="contact-container">
 
-    <!-- CONTACT INFO -->
     <div class="contact-info">
       <h2>Get in Touch</h2>
       <p>
@@ -12,9 +10,7 @@
 
       <p>
         <strong>Email:</strong>
-        <a href="mailto:darren@dmvboa.org">
-          darren@dmvboa.org
-        </a>
+        <a href="mailto:darren@dmvboa.org">darren@dmvboa.org</a>
       </p>
 
       <p>
@@ -23,7 +19,6 @@
       </p>
     </div>
 
-    <!-- CONTACT FORM (FORMSpree) -->
     <div class="contact-form">
       <h2>Send a Message</h2>
 
@@ -31,66 +26,38 @@
         action="https://formspree.io/f/mwvpgrwr"
         method="POST"
       >
-
-        <!-- Honeypot (spam protection) -->
         <input type="text" name="_gotcha" style="display:none">
-
-        <!-- Subject -->
-        <input
-          type="hidden"
-          name="_subject"
-          value="New DMVBOA Website Inquiry"
-        >
+        <input type="hidden" name="_subject" value="New DMVBOA Website Inquiry">
 
         <label>
           Name
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name"
-            required
-          >
+          <input type="text" name="name" required>
         </label>
 
         <label>
           Email
-          <input
-            type="email"
-            name="email"
-            placeholder="you@email.com"
-            required
-          >
+          <input type="email" name="email" required>
         </label>
 
         <label>
           Inquiry Type
           <select name="topic" required>
             <option value="">Select a topic</option>
-            <option value="Membership">Membership</option>
-            <option value="Events">Events</option>
-            <option value="Partnerships">Partnerships</option>
-            <option value="General Inquiry">General Inquiry</option>
+            <option>Membership</option>
+            <option>Events</option>
+            <option>Partnerships</option>
+            <option>General Inquiry</option>
           </select>
         </label>
 
         <label>
           Message
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="How can we help?"
-            required
-          ></textarea>
+          <textarea name="message" rows="5" required></textarea>
         </label>
 
         <button type="submit" class="btn-primary">
           Send Message
         </button>
-
-        <p class="cta-note">
-          Messages are delivered securely and reviewed by the DMVBOA team.
-        </p>
-
       </form>
     </div>
 
