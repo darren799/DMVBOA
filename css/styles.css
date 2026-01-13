@@ -278,10 +278,11 @@ nav a:hover {
 }
 
 /* =========================
-   CONTACT
+   CONTACT (FIX + POLISH)
 ========================= */
 .contact {
   padding: 90px 8%;
+  background: #f5f8fb;
 }
 
 .contact-container {
@@ -290,6 +291,12 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
+
+  /* Optional polish */
+  background: white;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 .contact-info h2,
@@ -355,5 +362,9 @@ footer {
 
   .homepage-cta h2 {
     font-size: 2rem;
+  }
+
+  .contact-container {
+    padding: 30px;
   }
 }
