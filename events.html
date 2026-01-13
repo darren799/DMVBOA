@@ -10,6 +10,12 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Leaflet CSS (required for map) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
 </head>
 
 <body>
@@ -42,16 +48,16 @@
 <!-- EVENTS (DYNAMIC) -->
 <section class="events">
   <h2>All Events</h2>
-<div class="filters">
-  <button class="active" data-filter="all">All</button>
-  <button data-filter="water">Water</button>
-  <button data-filter="land">Land</button>
-  <button data-filter="members">Members Only</button>
-</div>
+
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="water">Water</button>
+    <button data-filter="land">Land</button>
+    <button data-filter="members">Members Only</button>
+  </div>
 
   <div class="event-grid loading" id="eventsGrid">
-
-    <!-- Events injected from data/events.json -->
+    <!-- Injected by main.js -->
   </div>
 </section>
 
@@ -73,25 +79,16 @@
   <p>© 2026 DMV Boat Owners Association · All Rights Reserved</p>
 </footer>
 
-<!-- CREATECOMMUNITY CONFIG -->
+<!-- CONFIG -->
 <script>
   const CREATE_COMMUNITY_URL = "https://dmvboa.createcommunity.com";
 </script>
 
-<!-- JOIN BUTTON WIRING -->
-<script>
-  document.querySelectorAll(".join-btn").forEach(button => {
-    button.addEventListener("click", e => {
-      e.preventDefault();
-      window.open(CREATE_COMMUNITY_URL, "_blank");
-    });
-  });
-</script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- DYNAMIC EVENTS -->
+<!-- Main App Logic (events, filters, cards, map) -->
 <script src="js/main.js"></script>
-
-  <script src="js/main.js"></script>
 
 </body>
 </html>
