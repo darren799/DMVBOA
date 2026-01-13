@@ -1,6 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | DMV Boat Owners Association</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Contact the DMV Boat Owners Association for membership, events, or partnership inquiries.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="DMVBOA Logo">
+      <span>DMVBOA</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1>Contact DMVBOA</h1>
+  <p>We’d love to hear from you</p>
+</section>
+
+<!-- CONTACT SECTION -->
 <section class="contact">
   <div class="contact-container">
 
+    <!-- LEFT COLUMN -->
     <div class="contact-info">
       <h2>Get in Touch</h2>
       <p>
@@ -14,20 +57,22 @@
       </p>
 
       <p>
-        <strong>Location:</strong>
+        <strong>Serving:</strong>
         Washington, DC · Maryland · Virginia
       </p>
     </div>
 
+    <!-- RIGHT COLUMN -->
     <div class="contact-form">
       <h2>Send a Message</h2>
 
-      <form
-        action="https://formspree.io/f/mwvpgrwr"
-        method="POST"
-      >
+      <form action="https://formspree.io/f/mwvpgrwr" method="POST">
+
+        <!-- Spam protection -->
         <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_subject" value="New DMVBOA Website Inquiry">
+
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New DMVBOA Website Contact">
 
         <label>
           Name
@@ -58,8 +103,17 @@
         <button type="submit" class="btn-primary">
           Send Message
         </button>
+
       </form>
     </div>
 
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DMV Boat Owners Association · All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
