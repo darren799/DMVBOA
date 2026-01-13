@@ -17,13 +17,13 @@
     "membersOnly": false,
     "coords": [38.6883, -77.2920]
   },
-  {
-    "title": "Blessing of the Fleet",
-    "date": "May 2026",
-    "location": "Occoquan River",
-    "image": "img/event3.jpg",
-    "type": "water",
-    "membersOnly": true,
-    "coords": [38.6840, -77.2600]
-  }
-]
+  
+    {
+  "title": "ORMA – Blessing of the Fleet",
+  "date": "May 2026",
+  "location": "Occoquan River",
+  "image": "img/event3.jpg",
+  "type": "water",
+  "membersOnly": false,
+  "coords": [38.6840, -77.2600]
+}
