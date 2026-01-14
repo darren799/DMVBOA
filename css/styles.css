@@ -375,3 +375,20 @@ nav a[href*="shopify.com"]::after {
   content: " ↗";
   font-size: 0.85em;
 }
+/* =========================
+   WHY DMVBOA CTA FIX
+========================= */
+.why-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.why-cta a {
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.why-cta .btn-secondary {
+  display: block;
+  margin-top: 8px;
+}
