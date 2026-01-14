@@ -368,3 +368,10 @@ footer {
     padding: 30px;
   }
 }
+/* =========================
+   NAV: EXTERNAL STORE LINK
+========================= */
+nav a[href*="shopify.com"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+}
