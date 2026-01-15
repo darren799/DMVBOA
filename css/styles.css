@@ -427,3 +427,34 @@ nav a[href*="shopify.com"]::after {
   font-size: 1.1rem;
   color: #083b66;
 }
+/* =========================
+   PARTNERS
+========================= */
+.partners {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.partners-grid {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  padding: 30px;
+  text-align: center;
+}
+
+.partner-card img {
+  max-width: 140px;   /* 👈 THIS is what shrinks the logos */
+  max-height: 80px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
