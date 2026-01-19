@@ -1,0 +1,42 @@
+.navbar {
+  background: $brand-primary;
+  padding: 15px 5%;
+
+  .nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    color: $text-light;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    img {
+      height: 42px;
+      margin-right: 10px;
+    }
+  }
+
+  nav a {
+    color: $text-light;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.85;
+    }
+
+    &[href*="shopify.com"]::after {
+      content: " ↗";
+      font-size: 0.85em;
+    }
+  }
+}
