@@ -1,0 +1,27 @@
+.value-grid,
+.event-grid,
+.testimonial-grid,
+.flyer-grid,
+.partners-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.value-item,
+.event-card,
+.testimonial,
+.flyer-card,
+.partner-card {
+  background: $bg-card;
+  padding: 2rem;
+  border-radius: $radius-md;
+  box-shadow: $shadow-soft;
+}
+
+.event-card img {
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
