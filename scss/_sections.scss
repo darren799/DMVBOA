@@ -1,0 +1,14 @@
+section {
+  padding: 5rem 1.5rem;
+}
+
+.homepage-cta {
+  background: linear-gradient(135deg, $brand-primary, $brand-secondary);
+  color: $text-light;
+  text-align: center;
+
+  .cta-note {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+}
