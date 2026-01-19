@@ -1,0 +1,19 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0b1620;
+    color: #e6edf3;
+  }
+
+  .value-item,
+  .event-card,
+  .testimonial,
+  .flyer-card,
+  .partner-card {
+    background: #111c26;
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+  }
+
+  footer {
+    background: #061d32;
+  }
+}
