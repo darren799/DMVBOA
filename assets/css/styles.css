@@ -420,3 +420,69 @@ body {
 .app-button:hover {
   background: var(--aqua);
 }
+/* APP SECTION */
+
+.app-section {
+  background: white;
+}
+
+.app-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: var(--navy);
+  color: white;
+
+  padding: 1rem 1.25rem;
+
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  transition: .2s ease;
+}
+
+.store-btn:hover {
+  transform: translateY(-3px);
+  background: var(--blue);
+}
+
+.store-icon {
+  font-size: 2rem;
+  width: 42px;
+  text-align: center;
+}
+
+.store-small {
+  display: block;
+  font-size: .75rem;
+  opacity: .8;
+}
+
+.store-large {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .app-content {
+    grid-template-columns: 1fr;
+  }
+
+}
