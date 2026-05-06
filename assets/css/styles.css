@@ -412,3 +412,11 @@ body {
   }
 
 }
+.app-button {
+  background: white;
+  color: var(--navy);
+}
+
+.app-button:hover {
+  background: var(--aqua);
+}
