@@ -6,6 +6,13 @@ toggle?.addEventListener("click", () => {
   toggle.setAttribute("aria-expanded", String(isOpen));
 });
 
+document.querySelectorAll("#site-nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    toggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
 const carouselImages = document.querySelectorAll(".carousel-image");
 let currentImage = 0;
 
