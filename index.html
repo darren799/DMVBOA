@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -18,6 +19,7 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="assets/img/favicon.png" />
+
 </head>
 
 <body>
@@ -26,8 +28,13 @@
   <header class="site-header">
 
     <a class="brand" href="#home" aria-label="DMVBOA Home">
+
       <div class="brand-mark">⚓</div>
-      <span>DMV Boat Owners Association</span>
+
+      <span>
+        DMV Boat Owners Association
+      </span>
+
     </a>
 
     <button
@@ -39,6 +46,7 @@
     </button>
 
     <nav id="site-nav" class="site-nav">
+
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#events">Events</a>
@@ -55,6 +63,7 @@
       >
         Store
       </a>
+
     </nav>
 
   </header>
@@ -198,29 +207,15 @@
 
       <div class="event-grid">
 
-        <!-- ARCHIVED APRIL EVENTS -->
-        <article class="event-card archived-event">
+        <!-- MAY -->
+        <article
+          class="event-card"
+          data-event-date="2026-05-24"
+        >
 
           <h3>
-            April — Archived Events
+            May
           </h3>
-
-          <p>
-            <strong>April 18</strong><br />
-            4th Annual Pre-Season Brunch Cruise — Completed
-          </p>
-
-          <p>
-            Thank you to everyone who joined DMVBOA
-            for an unforgettable kickoff to the 2026 boating season.
-          </p>
-
-        </article>
-
-        <!-- MAY -->
-        <article class="event-card">
-
-          <h3>May</h3>
 
           <p>
             <strong>May 3</strong><br />
@@ -245,9 +240,14 @@
         </article>
 
         <!-- JUNE -->
-        <article class="event-card">
+        <article
+          class="event-card"
+          data-event-date="2026-06-22"
+        >
 
-          <h3>June</h3>
+          <h3>
+            June
+          </h3>
 
           <p>
             <strong>June 12–14</strong><br />
@@ -267,9 +267,14 @@
         </article>
 
         <!-- JULY -->
-        <article class="event-card">
+        <article
+          class="event-card"
+          data-event-date="2026-07-25"
+        >
 
-          <h3>July</h3>
+          <h3>
+            July
+          </h3>
 
           <p>
             <strong>July 3–6</strong><br />
@@ -289,9 +294,14 @@
         </article>
 
         <!-- AUGUST -->
-        <article class="event-card">
+        <article
+          class="event-card"
+          data-event-date="2026-08-22"
+        >
 
-          <h3>August</h3>
+          <h3>
+            August
+          </h3>
 
           <p>
             <strong>August 8</strong><br />
@@ -305,10 +315,15 @@
 
         </article>
 
-        <!-- SEPTEMBER -->
-        <article class="event-card">
+        <!-- SEPTEMBER / DECEMBER -->
+        <article
+          class="event-card"
+          data-event-date="2026-12-05"
+        >
 
-          <h3>September & December</h3>
+          <h3>
+            September & December
+          </h3>
 
           <p>
             <strong>September 26</strong><br />
@@ -595,7 +610,117 @@
   </footer>
 
   <!-- JS -->
-  <script src="assets/js/main.js"></script>
+  <script>
+
+    // MOBILE MENU
+    const toggle =
+      document.querySelector(".nav-toggle");
+
+    const nav =
+      document.querySelector("#site-nav");
+
+    toggle?.addEventListener("click", () => {
+
+      const isOpen =
+        nav.classList.toggle("open");
+
+      toggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+    });
+
+    // CLOSE MENU AFTER CLICK
+    document
+      .querySelectorAll("#site-nav a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          nav.classList.remove("open");
+
+          toggle?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+    // HERO IMAGE CAROUSEL
+    const carouselImages =
+      document.querySelectorAll(
+        ".carousel-image"
+      );
+
+    let currentImage = 0;
+
+    setInterval(() => {
+
+      if (!carouselImages.length) return;
+
+      carouselImages[currentImage]
+        .classList.remove("active");
+
+      currentImage =
+        (currentImage + 1) %
+        carouselImages.length;
+
+      carouselImages[currentImage]
+        .classList.add("active");
+
+    }, 3500);
+
+    // AUTO REMOVE PAST EVENTS
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+
+    document
+      .querySelectorAll("[data-event-date]")
+      .forEach((eventCard) => {
+
+        const eventDate =
+          new Date(
+            `${eventCard.dataset.eventDate}T23:59:59`
+          );
+
+        if (eventDate < today) {
+
+          eventCard.remove();
+
+        }
+
+      });
+
+    // EMPTY EVENTS FALLBACK
+    const eventGrid =
+      document.querySelector(".event-grid");
+
+    if (
+      eventGrid &&
+      eventGrid.children.length === 0
+    ) {
+
+      eventGrid.innerHTML = `
+        <article class="event-card">
+          <h3>
+            More Events Coming Soon
+          </h3>
+
+          <p>
+            Check back soon for new DMVBOA cruises,
+            raft-ups, community events,
+            and boating experiences.
+          </p>
+        </article>
+      `;
+
+    }
+
+  </script>
 
 </body>
 </html>
