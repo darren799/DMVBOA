@@ -3,22 +3,49 @@
 <head>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
 
-  <title>DMV Boat Owners Association</title>
+  <title>
+    DMV Boat Owners Association
+  </title>
 
   <meta
     name="description"
     content="DMV Boat Owners Association — boating, events, community, education, and adventures on the water."
   />
 
-  <meta property="og:title" content="DMV Boat Owners Association" />
-  <meta property="og:description" content="Boating • Adventure • Community" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/hero-1.jpg" />
+  <meta
+    property="og:title"
+    content="DMV Boat Owners Association"
+  />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/img/favicon.png" />
+  <meta
+    property="og:description"
+    content="Boating • Adventure • Community"
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:image"
+    content="assets/img/hero-1.jpg"
+  />
+
+  <link
+    rel="stylesheet"
+    href="assets/css/styles.css"
+  />
+
+  <link
+    rel="icon"
+    href="assets/img/favicon.png"
+  />
 
 </head>
 
@@ -27,9 +54,15 @@
   <!-- HEADER -->
   <header class="site-header">
 
-    <a class="brand" href="#home" aria-label="DMVBOA Home">
+    <a
+      class="brand"
+      href="#home"
+      aria-label="DMVBOA Home"
+    >
 
-      <div class="brand-mark">⚓</div>
+      <div class="brand-mark">
+        ⚓
+      </div>
 
       <span>
         DMV Boat Owners Association
@@ -45,7 +78,10 @@
       Menu
     </button>
 
-    <nav id="site-nav" class="site-nav">
+    <nav
+      id="site-nav"
+      class="site-nav"
+    >
 
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -155,7 +191,10 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section split">
+    <section
+      id="about"
+      class="section split"
+    >
 
       <div>
 
@@ -191,7 +230,10 @@
     </section>
 
     <!-- EVENTS -->
-    <section id="events" class="section">
+    <section
+      id="events"
+      class="section"
+    >
 
       <div class="section-heading">
 
@@ -342,7 +384,10 @@
     </section>
 
     <!-- MEMBERSHIP -->
-    <section id="membership" class="section callout">
+    <section
+      id="membership"
+      class="section callout"
+    >
 
       <h2>
         Join the Crew
@@ -377,7 +422,10 @@
     </section>
 
     <!-- PARTNERS -->
-    <section id="partners" class="section cards-two">
+    <section
+      id="partners"
+      class="section cards-two"
+    >
 
       <article>
 
@@ -417,7 +465,10 @@
     </section>
 
     <!-- SAFETY -->
-    <section id="safety" class="section split">
+    <section
+      id="safety"
+      class="section split"
+    >
 
       <div>
 
@@ -449,8 +500,11 @@
 
     </section>
 
-    <!-- DMVBOA APP -->
-    <section id="app" class="section app-section">
+    <!-- APP SECTION -->
+    <section
+      id="app"
+      class="section app-section"
+    >
 
       <div class="app-content">
 
@@ -516,7 +570,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="contact" class="site-footer">
+  <footer
+    id="contact"
+    class="site-footer"
+  >
 
     <div>
 
@@ -583,19 +640,35 @@
 
       <div class="socials">
 
-        <a href="#" target="_blank" rel="noopener">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
           Facebook
         </a>
 
-        <a href="#" target="_blank" rel="noopener">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
           Instagram
         </a>
 
-        <a href="#" target="_blank" rel="noopener">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
           YouTube
         </a>
 
-        <a href="#" target="_blank" rel="noopener">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
           LinkedIn
         </a>
 
@@ -609,118 +682,8 @@
 
   </footer>
 
-  <!-- JS -->
-  <script>
-
-    // MOBILE MENU
-    const toggle =
-      document.querySelector(".nav-toggle");
-
-    const nav =
-      document.querySelector("#site-nav");
-
-    toggle?.addEventListener("click", () => {
-
-      const isOpen =
-        nav.classList.toggle("open");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-
-    });
-
-    // CLOSE MENU AFTER CLICK
-    document
-      .querySelectorAll("#site-nav a")
-      .forEach((link) => {
-
-        link.addEventListener("click", () => {
-
-          nav.classList.remove("open");
-
-          toggle?.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        });
-
-      });
-
-    // HERO IMAGE CAROUSEL
-    const carouselImages =
-      document.querySelectorAll(
-        ".carousel-image"
-      );
-
-    let currentImage = 0;
-
-    setInterval(() => {
-
-      if (!carouselImages.length) return;
-
-      carouselImages[currentImage]
-        .classList.remove("active");
-
-      currentImage =
-        (currentImage + 1) %
-        carouselImages.length;
-
-      carouselImages[currentImage]
-        .classList.add("active");
-
-    }, 3500);
-
-    // AUTO REMOVE PAST EVENTS
-    const today = new Date();
-
-    today.setHours(0, 0, 0, 0);
-
-    document
-      .querySelectorAll("[data-event-date]")
-      .forEach((eventCard) => {
-
-        const eventDate =
-          new Date(
-            `${eventCard.dataset.eventDate}T23:59:59`
-          );
-
-        if (eventDate < today) {
-
-          eventCard.remove();
-
-        }
-
-      });
-
-    // EMPTY EVENTS FALLBACK
-    const eventGrid =
-      document.querySelector(".event-grid");
-
-    if (
-      eventGrid &&
-      eventGrid.children.length === 0
-    ) {
-
-      eventGrid.innerHTML = `
-        <article class="event-card">
-          <h3>
-            More Events Coming Soon
-          </h3>
-
-          <p>
-            Check back soon for new DMVBOA cruises,
-            raft-ups, community events,
-            and boating experiences.
-          </p>
-        </article>
-      `;
-
-    }
-
-  </script>
+  <!-- EXTERNAL JS -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
